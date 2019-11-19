@@ -4,7 +4,7 @@ import Item3 from '../../images/item3.jpg'
 import Item4 from '../../images/item4.jpg'
 import Item5 from '../../images/item5.jpg'
 import Item6 from '../../images/item6.jpg'
-import { ADD_TO_CART} from '../actions/action-types/cart-actions'
+import { ADD_TO_CART, REMOVE_ITEM} from '../actions/action-types/cart-actions'
 
 
 const initState = {
@@ -48,9 +48,24 @@ const cartReducer= (state = initState,action)=>{
             
         }
     }
+
+    if(action.type === REMOVE_ITEM){
+        let itemToRemove= state.addedItems.find(item=> action.id === item.id)
+        let new_items = state.addedItems.filter(item=> action.id !== item.id)
+        
+        //calculating the total
+        let newTotal = state.total - (itemToRemove.price * itemToRemove.quantity )
+        console.log(itemToRemove)
+        return{
+            ...state,
+            addedItems: new_items,
+            total: newTotal
+        }
+    }
+
     else{
         return state
     }
   }
-  
+
   export default cartReducer
