@@ -21,7 +21,7 @@ namespace TomaattiAPI.Controllers
         }
 
         // GET: api/Tomaatti/5
-        [HttpGet("search/{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "Get")]
         public Tuote Get(int id)
         {
             using(KiertomaattiDBContext db = new KiertomaattiDBContext())
