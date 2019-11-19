@@ -1,52 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import Cart from './components/Cart'
 // import LuoTuote from './LuoTuote';
 // import logo from './logo.svg';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';  
+//import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';  
 import './App.css';
 // import DataBox from './DataBox.js'
 import LuoTuote from './LuoTuote';
 
-function App() {
-  return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          TomaattiAPP! <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <LuoTuote/>
-    </div>
-  );
-}
 
-// function App() {
-//   return (
-//     <Router>
-//       <div className="container">
-//         <nav className="navbar navbar-expand-lg navheader">
-//           <div className="collapse navbar-collapse" >
-//             <ul className="navbar-nav mr-auto">
-//               <li className="nav-item">
-//                 <Link to={'/LuoTuote'} className="nav-link">Luo Tuote</Link>
-//               </li>
-//             </ul>
-//           </div>
-//         </nav> <br />
-//         <Switch>
-//           <Route exact path='/LuoTuote' component={LuoTuote} />
-//         </Switch>
-//       </div>
-//     </Router>
-//   );
-// }
+class App extends Component {
+  render() {
+    return (
+       <BrowserRouter>
+            <div className="App">
+            
+              <Navbar/>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/cart" component={Cart}/>
+                  </Switch>
+             </div>
+       </BrowserRouter>
+      
+    );
+  }
+
+
+//function App() {
+  //return (
+    //<div className="App">
+      //<LuoTuote/>
+    //</div>
+  //);
+//}
 
 export default App;
