@@ -15,7 +15,7 @@ import { addToCart } from './actions/cartActions'
                         <div className="card-image">
                             <img src={item.img} alt={item.title}/>
                             <span className="card-title">{item.title}</span>
-                            <span to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">ADD ITEM TO CART</i></span>
+                            <span to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></span>
                         </div>
 
                         <div className="card-content">
@@ -29,7 +29,7 @@ import { addToCart } from './actions/cartActions'
 
         return(
             <div className="container">
-                <h3 className="center">Our items</h3>
+                <h3 className="center">Tuotteet</h3>
                 <div className="box">
                     {itemList}
                 </div>
