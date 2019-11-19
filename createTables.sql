@@ -77,4 +77,4 @@ insert into tuote
 insert into kayttaja
 (kayttajanimi, email, salasana) values ('urho', 'testi@testi.fi', '12345')
 
-select * from tuote
+select * from tuote join kayttaja on tuote.kayttajaID = kayttaja.kayttajaID
