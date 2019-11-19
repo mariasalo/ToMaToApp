@@ -40,7 +40,7 @@ namespace TomaattiAPI.Controllers
 
         // POST: api/Tomaatti
         [HttpPost]
-        public void Post([FromBody] Tuote tuote /*reactista tuleva tuote-json parseroituu itsestään olioksi*/)
+        public void Post([FromBody] Tuote tuote /*reactista tuleva tuote-json parseroituu itsestään olioksi  */)
         {
             KiertomaattiDBContext db = new KiertomaattiDBContext();
             db.Tuote.Add(tuote);
