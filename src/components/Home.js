@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
 import HaeTuote from '../toiminnallisuudet/HaeTuote';
+import LuoTuote from '../toiminnallisuudet/LuoTuote';
 
  class Home extends Component{
     
@@ -35,6 +36,7 @@ import HaeTuote from '../toiminnallisuudet/HaeTuote';
                     {itemList}
                 </div>
                 <div><HaeTuote/></div>
+                <div><LuoTuote/></div>
                 <div></div>
             </div>
         )
