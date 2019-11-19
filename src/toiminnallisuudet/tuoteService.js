@@ -15,7 +15,7 @@ axios.get('https://localhost:44376/api/tomaatti/1')
 })  
 }
 
-//Tässä POST pyyntö:
+//Tässä POST pyyntö: // tämä on kesken !
 export function postLisää(){
   axios.post('https://localhost:44376/api/tomaatti/1', {Nimi:this.state.Nimi, Kuvaus:this.state.Kuvaus,  
   Lkm:this.state.Lkm, Sijainti:this.state.Sijainti})  
@@ -33,6 +33,31 @@ this.props.history.push('/HaeTuote')
 })  
 }
 
+//Tässä PUT pyyntö: // tämä on kesken !
+export function putMuokkaa(){
+        axios.get('https://localhost:44376/api/tomaatti/?id'+this.props.match.params.id)  
+            .then(response => {  
+                this.setState({   
+                Nimi: response.data.Nimi,   
+                Kuvaus: response.data.Kuvaus,  
+                Lkm: response.data.Lkm,  
+                Sijainti: response.data.Sijainti });  
+    
+            })  
+            .catch(function (error) {  
+                console.log(error);  
+            })  
+}
+
+//Tässä DELETE pyyntö: // tämä on kesken !
+export function deletePoista(){
+     axios.delete('http://localhost:44376/Api/tomaatti/Deletepoista?id='+this.props.obj.Id)  
+    .then(json => {  
+    if(json.data.Status==='Delete'){  
+    alert('Record deleted successfully!!');  
+    }  
+    }) 
+  }
 
 
 

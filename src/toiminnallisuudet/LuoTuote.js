@@ -1,6 +1,6 @@
 import React from 'react';  
 import axios from 'axios';  
-import '../LuoTuote.css'  
+import './LuoTuote.css'  
 import { Container, Col, Form, Row, FormGroup, Label, Input, Button } from 'reactstrap';  
 import { postLisää } from './tuoteService';
 
@@ -31,7 +31,7 @@ LuoTuote=()=>{
 // }  
 // })  
 }  
-lisääTuotteet(data){
+lisääTuotteet(data){ //me lisättiin tämä, ei varmaan toimi :D
   this.setState({ tuotteet: data });  
 }
    
