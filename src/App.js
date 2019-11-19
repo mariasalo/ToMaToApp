@@ -35,6 +35,6 @@ class App extends Component {
       //<LuoTuote/>
     //</div>
   //);
-//}
+}
 
 export default App;

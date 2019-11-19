@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
+// import testi from './urhontesti'
 
  class Home extends Component{
     
@@ -9,6 +10,7 @@ import { addToCart } from './actions/cartActions'
     }
 
     render(){
+
         let itemList = this.props.items.map(item=>{
             return(
                 <div className="card" key={item.id}>
@@ -33,6 +35,9 @@ import { addToCart } from './actions/cartActions'
                 <div className="box">
                     {itemList}
                 </div>
+                {/* <div>
+                    {testi}
+                </div> */}
             </div>
         )
     }

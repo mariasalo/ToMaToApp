@@ -1,6 +1,6 @@
 import React from 'react';  
 import axios from 'axios';  
-import '../LuoTuote.css'  
+import './LuoTuote.css'  
 import { Container, Col, Form, Row, FormGroup, Label, Input, Button } from 'reactstrap';  
 
 class LuoTuote extends React.Component{  
