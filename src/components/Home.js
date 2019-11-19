@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
-// import testi from './urhontesti'
+
+import HaeTuote from '../toiminnallisuudet/HaeTuote';
+import LuoTuote from '../toiminnallisuudet/LuoTuote';
 
  class Home extends Component{
     
@@ -35,9 +37,15 @@ import { addToCart } from './actions/cartActions'
                 <div className="box">
                     {itemList}
                 </div>
+<<<<<<< HEAD
                 {/* <div>
                     {testi}
                 </div> */}
+=======
+                <div><HaeTuote/></div>
+                <div><LuoTuote/></div>
+                <div></div>
+>>>>>>> master
             </div>
         )
     }

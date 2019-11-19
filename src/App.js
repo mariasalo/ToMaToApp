@@ -8,7 +8,8 @@ import Cart from './components/Cart'
 //import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';  
 import './App.css';
 // import DataBox from './DataBox.js'
-import LuoTuote from './LuoTuote';
+// import LuoTuote from './LuoTuote';
+
 
 
 class App extends Component {
@@ -28,13 +29,6 @@ class App extends Component {
     );
   }
 
-
-//function App() {
-  //return (
-    //<div className="App">
-      //<LuoTuote/>
-    //</div>
-  //);
 }
 
 export default App;
