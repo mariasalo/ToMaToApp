@@ -37,15 +37,9 @@ import LuoTuote from '../toiminnallisuudet/LuoTuote';
                 <div className="box">
                     {itemList}
                 </div>
-<<<<<<< HEAD
-                {/* <div>
-                    {testi}
-                </div> */}
-=======
                 <div><HaeTuote/></div>
                 <div><LuoTuote/></div>
                 <div></div>
->>>>>>> master
             </div>
         )
     }
