@@ -27,7 +27,6 @@ const Navbar = ()=>{
                   <ul className="right">
                       <li><Link to="/">Kaikki tuotteet</Link></li>
                       <li><Link to="/cart">Varaukset</Link></li>
-                      <li><Link to="/urhontesti">UrhonTesti</Link></li>
                       {/* <li><Link to="/cart"><i className="material-icons">shopping_cart</i></Link></li> */}
                   </ul>
               </div>

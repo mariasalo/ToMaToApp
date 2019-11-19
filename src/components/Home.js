@@ -39,7 +39,6 @@ import LuoTuote from '../toiminnallisuudet/LuoTuote';
                 </div>
                 <div><HaeTuote/></div>
                 <div><LuoTuote/></div>
-                <div></div>
             </div>
         )
     }

@@ -5,7 +5,7 @@ export default function getKaikki(callback){
 axios.get('https://localhost:44376/api/tomaatti/1')  
 .then(response => {  
   //this.setState({ business: response.data }); 
-  console.log(response, 'onnistui')
+  // console.log(response, 'onnistui')
   callback(response.data) 
   debugger;  
 

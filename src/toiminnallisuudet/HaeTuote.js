@@ -10,26 +10,19 @@ export default class HaeTuote extends Component {
       this.state = {tuotteet: []};  
     }  
     componentDidMount(){  
-      debugger;  
+      // debugger;  
       getKaikki(this.talletaTuotteet)
-      // axios.get('server=localhost;database=AforismiDB')  
-      //   .then(response => {  
-      //     this.setState({ business: response.data });  
-      //     debugger;  
-  
-      //   })  
-      //   .catch(function (error) {  
-      //     console.log(error);  
-      //   })  
     }  
 //tämä liittyy GET pyyntöön joka on tuoteService.js luokassa
     talletaTuotteet(data){
-      this.setState({ tuotteet: data });  
+      this.setState({ tuotteet: data });
     }
       
     tabRow(){  
       return this.state.tuotteet.map(function(object, i){  
-          return <HaeTuote obj={object} key={i} />;  
+          return <HaeTuote obj={object} key={i} />; 
+
+
       });  
     }  
   
@@ -51,7 +44,10 @@ export default class HaeTuote extends Component {
             <tbody>  
              { this.tabRow() }   
             </tbody>  
-          </table>  
+          </table>
+          <div>
+            {getKaikki(this.talletaTuotteet)}
+          </div> 
         </div>  
       );  
     }  
