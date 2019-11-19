@@ -3,6 +3,12 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Cart from './components/Cart'
+// import LuoTuote from './LuoTuote';
+// import logo from './logo.svg';
+//import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';  
+import './App.css';
+// import DataBox from './DataBox.js'
+import LuoTuote from './LuoTuote';
 
 
 class App extends Component {
@@ -21,6 +27,14 @@ class App extends Component {
       
     );
   }
-}
+
+
+//function App() {
+  //return (
+    //<div className="App">
+      //<LuoTuote/>
+    //</div>
+  //);
+//}
 
 export default App;
