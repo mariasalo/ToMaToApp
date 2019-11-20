@@ -53,6 +53,7 @@ import getKaikki from '../toiminnallisuudet/tuoteService';
                 <div className="box">
                     {itemList}
                 </div>
+
                 <div><HaeTuote tuotteet={this.state.tuotteet}/></div>
             </div>
         )
