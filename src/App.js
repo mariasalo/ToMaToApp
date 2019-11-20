@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Cart from './components/Cart'
 import Add from './components/Add';
+import Update from './components/Update';
+
 import './index.css';
 
 // import LuoTuote from './LuoTuote';
@@ -22,6 +24,7 @@ class App extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/cart" component={Cart}/>
                     <Route path="/add" component={Add}/>
+                    <Route path="/update" component={Update}/>
                   </Switch>
              </div>
        </BrowserRouter>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom'
 import Cart from './Cart';
 import Add from './Add';
+import Update from './Update';
 
 const Navbar = ()=>{
     const padding = { padding: 5 }
@@ -29,8 +30,10 @@ const Navbar = ()=>{
                   
                   <ul className="right">
                       <li><Link to="/">Selaa tuotteita</Link></li>
-                      <li><Link to="/add">Ilmoita</Link></li>
+                      <li><Link to="/add">Ilmoita uusi tuote</Link></li>
+                      <li><Link to="/update">Omat ilmoitukset</Link></li>
                       <li><Link to="/cart">Omat varaukset</Link></li>
+
                       {/* <li><Link to="/cart"><i className="material-icons">eco</i></Link></li> */}
                   </ul>
               </div>
