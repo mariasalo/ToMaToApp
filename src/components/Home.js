@@ -32,18 +32,15 @@ import LuoTuote from '../toiminnallisuudet/LuoTuote';
         })
 
         return(
-                <div class="col-md-4">
+            <div>
             <div className="container">
-                <h3 className="center"></h3>
+                <h3 className="center">Kaikki tuotteet</h3>
                 <div className="box">
                     {itemList}
                 </div>
-<<<<<<< HEAD
-                </div>
-=======
-                <div><HaeTuote/></div>
-                <div><LuoTuote/></div>
->>>>>>> 904480543c055225bab71db870c2be6299f82160
+            </div>
+            <div><HaeTuote/></div>
+            <div><LuoTuote/></div>
             </div>
         )
     }

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 //Tässä GET pyyntö:
 export default function getKaikki(callback){
-axios.get('https://localhost:44376/api/tomaatti/1')  
+axios.get('https://localhost:44376/api/tomaatti/')  
 .then(response => {  
   //this.setState({ business: response.data }); 
   // console.log(response, 'onnistui')
@@ -16,18 +16,19 @@ axios.get('https://localhost:44376/api/tomaatti/1')
 }
 
 //Tässä POST pyyntö: // tämä on kesken !
-export function postLisää(data){
-  axios.post('https://localhost:44376/api/tomaatti/1', {Nimi:data.Nimi, Kuvaus:data.Kuvaus,  
-  Lkm:data.Lkm, Sijainti:data.Sijainti})  
+export function postLisää(myJSON){
+  console.log(myJSON)
+
+axios.post('https://localhost:44376/api/tomaatti/', myJSON) 
 .then(json => {  
-if(json.data.Status==='Success'){  
+if(json.data.Status==='success'){  
   console.log(json.data.Status);  
   alert("Data Save Successfully");  
 this.props.history.push('/HaeTuote')  
 }  
 else{  
 alert('Data not Saved');  
-debugger;  
+debugger;
 this.props.history.push('/HaeTuote')  
 }  
 })  
