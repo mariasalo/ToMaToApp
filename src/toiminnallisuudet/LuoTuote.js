@@ -15,7 +15,7 @@ Sijainti:'',
 }  
 }   
 LuoTuote=()=>{  
-  postLisää(this.lisääTuotteet)
+  postLisää(this.state)
 //   axios.post('http://localhost:52564/Api/Student/AddotrUpdatestudent/', {Nimi:this.state.Nimi, Kuvaus:this.state.Kuvaus,  
 //   Lkm:this.state.Lkm, Sijainti:this.state.Sijainti})  
 // .then(json => {  
@@ -31,9 +31,9 @@ LuoTuote=()=>{
 // }  
 // })  
 }  
-lisääTuotteet(data){ //me lisättiin tämä, ei varmaan toimi :D
-  this.setState({ tuotteet: data });  
-}
+// lisääTuotteet(data){ //me lisättiin tämä, ei varmaan toimi :D
+//   this.setState({ tuotteet: data });  
+// }
    
 handleChange= (e)=> {  
 this.setState({[e.target.name]:e.target.value});  
