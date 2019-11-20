@@ -75,10 +75,8 @@ import Tuote from '../toiminnallisuudet/Tuote';
                 <div className="box">
                     {itemList}
                     {itemList2}
-
                 </div>
 
-                {/* <div><HaeTuote tuotteet={this.state.tuotteet}/></div> */}
             </div>
         )
     }
