@@ -4,7 +4,6 @@ import { addToCart } from './actions/cartActions'
 import HaeTuote from '../toiminnallisuudet/HaeTuote';
 //import talletaTuotteet from '..toiminnallisuudet/TuoteService.js'; // ei toimi
 import getKaikki from '../toiminnallisuudet/tuoteService';
-import LuoTuote from '../toiminnallisuudet/LuoTuote';
 import Tuote from '../toiminnallisuudet/Tuote';
 
  class Home extends Component{
@@ -71,7 +70,7 @@ import Tuote from '../toiminnallisuudet/Tuote';
 
         return(
             <div className="container">
-                <h3 className="center"></h3>
+                <h3 className="center">Kaikki tuotteet</h3>
                 <div className="box">
                     {itemList}
                     {itemList2}
