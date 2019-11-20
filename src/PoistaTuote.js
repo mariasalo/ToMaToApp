@@ -40,4 +40,4 @@ class PoistaTuote extends Component {
   }  
 }  
   
-export default Table;
+export default PoistaTuote;
