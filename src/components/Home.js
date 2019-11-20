@@ -59,10 +59,8 @@ import LuoTuote from '../toiminnallisuudet/LuoTuote';
                 <div className="box">
                     {itemList}
                 </div>
-                </div>
 
                 <div><HaeTuote tuotteet={this.state.tuotteet}/></div>
-                <div><LuoTuote/></div>
             </div>
         )
     }
