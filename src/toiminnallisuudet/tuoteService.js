@@ -15,7 +15,7 @@ axios.get('https://localhost:44376/api/tomaatti/')
 })  
 }
 
-//Tässä POST pyyntö: // tämä on kesken !
+//Tässä POST pyyntö:
 export function postLisää(myJSON){
   console.log(myJSON)
 
@@ -52,7 +52,7 @@ export function putMuokkaa(){
 
 //Tässä DELETE pyyntö: // tämä on kesken !
 export function deletePoista(){
-     axios.delete('http://localhost:44376/Api/tomaatti/Deletepoista?id='+this.props.obj.Id)  
+     axios.delete('http://localhost:44376//api/Tomaatti/delete/{id}'+this.props.obj.Id)  
     .then(json => {  
     if(json.data.Status==='Delete'){  
     alert('Record deleted successfully!!');  
