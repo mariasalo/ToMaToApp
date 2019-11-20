@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
 
+import HaeTuote from '../toiminnallisuudet/HaeTuote';
+import LuoTuote from '../toiminnallisuudet/LuoTuote';
+
  class Home extends Component{
     
     handleClick = (id)=>{
@@ -9,6 +12,7 @@ import { addToCart } from './actions/cartActions'
     }
 
     render(){
+
         let itemList = this.props.items.map(item=>{
             return(
                 <div className="card" key={item.id}>
@@ -33,6 +37,8 @@ import { addToCart } from './actions/cartActions'
                 <div className="box">
                     {itemList}
                 </div>
+                <div><HaeTuote/></div>
+                <div><LuoTuote/></div>
             </div>
         )
     }

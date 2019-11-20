@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';  
 import axios from 'axios'  
 import '../LuoTuote.css'  
+import { putMuokkaa } from './tuoteService';
 class Edit extends React.Component {  
     constructor(props) {  
         super(props)  
@@ -20,19 +21,21 @@ class Edit extends React.Component {
         }  
     }  
     
-    componentDidMount() {  
-        axios.get('http://localhost:52564/Api/Tomaatti/StudentdetailById?id='+this.props.match.params.id)  
-            .then(response => {  
-                this.setState({   
-                Nimi: response.data.Nimi,   
-                Kuvaus: response.data.Kuvaus,  
-                Lkm: response.data.Lkm,  
-                Sijainti: response.data.Sijainti });  
+    componentDidMount() {   // kesken !
+        putMuokkaa() //id parametrinä ? miten ?
+        
+        // axios.get('http://localhost:52564/Api/Tomaatti/StudentdetailById?id='+this.props.match.params.id)  
+        //     .then(response => {  
+        //         this.setState({   
+        //         Nimi: response.data.Nimi,   
+        //         Kuvaus: response.data.Kuvaus,  
+        //         Lkm: response.data.Lkm,  
+        //         Sijainti: response.data.Sijainti });  
     
-            })  
-            .catch(function (error) {  
-                console.log(error);  
-            })  
+        //     })  
+        //     .catch(function (error) {  
+        //         console.log(error);  
+        //     })  
     }  
     
     onChangeNimi(e) {  
