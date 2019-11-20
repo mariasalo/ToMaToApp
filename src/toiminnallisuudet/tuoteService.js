@@ -16,9 +16,9 @@ axios.get('https://localhost:44376/api/tomaatti/1')
 }
 
 //Tässä POST pyyntö: // tämä on kesken !
-export function postLisää(){
-  axios.post('https://localhost:44376/api/tomaatti/1', {Nimi:this.state.Nimi, Kuvaus:this.state.Kuvaus,  
-  Lkm:this.state.Lkm, Sijainti:this.state.Sijainti})  
+export function postLisää(data){
+  axios.post('https://localhost:44376/api/tomaatti/1', {Nimi:data.Nimi, Kuvaus:data.Kuvaus,  
+  Lkm:data.Lkm, Sijainti:data.Sijainti})  
 .then(json => {  
 if(json.data.Status==='Success'){  
   console.log(json.data.Status);  
