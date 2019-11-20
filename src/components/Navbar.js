@@ -28,9 +28,9 @@ const Navbar = ()=>{
                   <Link to="/" className="brand-logo">ToMaTo</Link>
                   
                   <ul className="right">
-                      <li><Link to="/">Etsi</Link></li>
+                      <li><Link to="/">Selaa tuotteita</Link></li>
                       <li><Link to="/add">Ilmoita</Link></li>
-                      <li><Link to="/cart">Profiili</Link></li>
+                      <li><Link to="/cart">Omat varaukset</Link></li>
                       {/* <li><Link to="/cart"><i className="material-icons">eco</i></Link></li> */}
                   </ul>
               </div>
