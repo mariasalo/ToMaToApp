@@ -2,7 +2,7 @@ import axios from 'axios';
 
 //Tässä GET pyyntö:
 export default function getKaikki(callback){
-axios.get('https://localhost:44376/api/tomaatti/1')  
+axios.get('https://localhost:44376/api/tomaatti/')  
 .then(response => {  
   //this.setState({ business: response.data }); 
   // console.log(response, 'onnistui')

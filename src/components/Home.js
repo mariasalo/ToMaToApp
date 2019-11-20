@@ -1,11 +1,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
-
 import HaeTuote from '../toiminnallisuudet/HaeTuote';
+//import talletaTuotteet from '..toiminnallisuudet/TuoteService.js'; // ei toimi
+import getKaikki from '../toiminnallisuudet/tuoteService';
 import LuoTuote from '../toiminnallisuudet/LuoTuote';
 
  class Home extends Component{
+//nämä kuntoon:-----
+    constructor(props) {  
+        super(props);  
+        //this.state = 
+        this.state = {tuotteet: []};  
+      }  
+      componentDidMount(){  
+        // debugger;  
+        getKaikki(this.talletaTuotteet)
+      }  
+  //tämä liittyy GET pyyntöön joka on tuoteService.js luokassa
+      talletaTuotteet = (data) => {
+          console.dir(data)
+        this.setState({ tuotteet: data });
+      }
+      //YLLÄOLEVAT LISÄTTY
     
     handleClick = (id)=>{
         this.props.addToCart(id); 
@@ -32,18 +49,18 @@ import LuoTuote from '../toiminnallisuudet/LuoTuote';
         })
 
         return(
-                <div class="col-md-4">
+                <div className="col-md-4">
             <div className="container">
                 <h3 className="center"></h3>
                 <div className="box">
                     {itemList}
                 </div>
-<<<<<<< HEAD
+
                 </div>
-=======
-                <div><HaeTuote/></div>
+
+                <div><HaeTuote tuotteet={this.state.tuotteet}/></div>
                 <div><LuoTuote/></div>
->>>>>>> 904480543c055225bab71db870c2be6299f82160
+
             </div>
         )
     }
