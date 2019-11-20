@@ -77,9 +77,9 @@ return (
           <Col sm={1}>  
           <button type="button" onClick={this.LuoTuote} className="btn btn-success">Submit</button>  
           </Col>  
-          <Col sm={1}>  
+          {/* <Col sm={1}>  
             <Button color="danger">Cancel</Button>{' '}  
-          </Col>  
+          </Col>   */}
           <Col sm={5}>  
           </Col>  
         </FormGroup>  

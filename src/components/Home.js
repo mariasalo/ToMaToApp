@@ -31,19 +31,17 @@ import LuoTuote from '../toiminnallisuudet/LuoTuote';
             )
         })
 
+   
+        {/* <li><Link to="/location"><i className="material-icons">room</i></Link></li> */}
+        {/* <li><Link to="/view"><i className="material-icons">view_module</i></Link></li> */}
+
+
         return(
-                <div class="col-md-4">
             <div className="container">
                 <h3 className="center"></h3>
                 <div className="box">
                     {itemList}
                 </div>
-<<<<<<< HEAD
-                </div>
-=======
-                <div><HaeTuote/></div>
-                <div><LuoTuote/></div>
->>>>>>> 904480543c055225bab71db870c2be6299f82160
             </div>
         )
     }
