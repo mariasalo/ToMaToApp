@@ -1,18 +1,20 @@
 import React, { Component } from 'react';  
 import axios from 'axios';  
 import { Link } from 'react-router-dom';  
+import { deletePoista } from './tuoteService';
 class PoistaTuote extends Component {  
   constructor(props) {  
     super(props);  
     }  
       
-    DeleteStudent= () =>{  
-     axios.delete('http://localhost:52564/Api/Student/Deletestudent?id='+this.props.obj.Id)  
-    .then(json => {  
-    if(json.data.Status==='Delete'){  
-    alert('Record deleted successfully!!');  
-    }  
-    })  
+    DeleteStudent= () =>{  // tämä on kesken !
+      deletePoista()
+    //  axios.delete('http://localhost:52564/Api/Student/Deletestudent?id='+this.props.obj.Id)  
+    // .then(json => {  
+    // if(json.data.Status==='Delete'){  
+    // alert('Record deleted successfully!!');  
+    // }  
+    // })  
     }  
   render() {  
     return (  
@@ -40,4 +42,4 @@ class PoistaTuote extends Component {
   }  
 }  
   
-export default Table;
+export default PoistaTuote;

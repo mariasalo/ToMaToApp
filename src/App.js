@@ -7,7 +7,13 @@ import Cart from './components/Cart'
 // import logo from './logo.svg';
 //import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';  
 import './App.css';
+<<<<<<< HEAD
 import LuoTuote from './LuoTuote';
+=======
+// import DataBox from './DataBox.js'
+// import LuoTuote from './LuoTuote';
+
+>>>>>>> 904480543c055225bab71db870c2be6299f82160
 
 
 class App extends Component {
@@ -27,7 +33,9 @@ class App extends Component {
     );
   }}
 
+}
 
+<<<<<<< HEAD
 //function App() {
   //return (
     //<div className="App">
@@ -36,3 +44,6 @@ class App extends Component {
   //);
 
   export default App;
+=======
+export default App;
+>>>>>>> 904480543c055225bab71db870c2be6299f82160
