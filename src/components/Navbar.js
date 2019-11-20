@@ -22,11 +22,13 @@ const Navbar = ()=>{
       // </div>
           <nav className="nav-wrapper">
               <div className="container">
-                  <Link to="/" className="brand-logo">logo</Link>
+                  <Link to="/" className="brand-logo">ToMaTo</Link>
                   
                   <ul className="right">
-                      <li><Link to="/">Kaikki tuotteet</Link></li>
-                      <li><Link to="/cart">Varaukset</Link></li>
+                      <li><Link to="/">Etsi</Link></li>
+                      <li><Link to="/">Ilmoita</Link></li>
+                      <li><Link to="/">Viestit</Link></li>
+                      <li><Link to="/cart">Profiili</Link></li>
                       {/* <li><Link to="/cart"><i className="material-icons">shopping_cart</i></Link></li> */}
                   </ul>
               </div>

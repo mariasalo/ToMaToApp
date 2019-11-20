@@ -42,12 +42,12 @@ class Cart extends Component{
             ):
 
              (
-                <p>Nothing.</p>
+                <p>Sinulla ei ole varattuja tuotteita.</p>
              )
        return(
             <div className="container">
                 <div className="cart">
-                    <h5>You have ordered:</h5>
+                    <h5>Varaamasi tuotteet:</h5>
                     <ul className="collection">
                         {addedItems}
                     </ul>
