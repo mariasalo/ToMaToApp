@@ -7,7 +7,6 @@ import Cart from './components/Cart'
 // import logo from './logo.svg';
 //import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';  
 import './App.css';
-// import DataBox from './DataBox.js'
 import LuoTuote from './LuoTuote';
 
 
@@ -26,7 +25,7 @@ class App extends Component {
        </BrowserRouter>
       
     );
-  }
+  }}
 
 
 //function App() {
@@ -35,6 +34,5 @@ class App extends Component {
       //<LuoTuote/>
     //</div>
   //);
-//}
 
-export default App;
+  export default App;
