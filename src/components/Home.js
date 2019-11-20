@@ -70,7 +70,7 @@ import Tuote from '../toiminnallisuudet/Tuote';
 
         return(
             <div className="container">
-                <h3 className="center">Kaikki tuotteet</h3>
+                <h3 className="center"></h3>
                 <div className="box">
                     {itemList}
                     {itemList2}
