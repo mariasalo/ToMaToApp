@@ -10,7 +10,7 @@ super(props)
 this.state = {  
 Nimi:'',  
 Kuvaus:'',  
-Lkm: 0,
+Lkm: 1,
 Sijainti:'',   
 }  
 }   
@@ -24,7 +24,18 @@ LuoTuote=()=>{
 handleChange= (e)=> {  
 // this.setState({[e.target.name]:e.target.value});  
 this.setState({[e.target.name]: e.target.type === 'number' ? parseInt(e.target.value) : e.target.value}); 
-}  
+// }  
+// {
+  // if(e.target.type === 'number'){
+  //   this.setState({[e.target.name]: parseInt(e.target.value)});
+  // }
+  // if(e.target.type === isNaN){
+  //   this.setState({[e.target.name]: null})
+  // }
+  // else{
+  //   this.setState({[e.target.name]:e.target.value});
+// }
+}
    
 render() {  
 return (  
@@ -47,7 +58,7 @@ return (
         <FormGroup row>  
           <Label for="lkm" sm={2}>Lkm</Label>  
           <Col sm={10}>  
-            <Input type="number" name="Lkm" onChange={this.handleChange} value={this.state.Lkm} placeholder="Lukumäärä" />  
+            <Input type="number" name="Lkm" onChange={this.handleChange} value={this.state.Lkm} placeholder="Lukumäärä" required />  
           </Col>  
         </FormGroup>  
         <FormGroup row>  

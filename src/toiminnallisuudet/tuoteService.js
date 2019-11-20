@@ -21,15 +21,15 @@ export function postLisää(myJSON){
 
 axios.post('https://localhost:44376/api/tomaatti/', myJSON) 
 .then(json => {  
-if(json.data.Status==='success'){  
-  console.log(json.data.Status);  
-  alert("Data Save Successfully");  
-this.props.history.push('/HaeTuote')  
+if(json.status===200){  
+  console.log(json.status);  
+  alert("Lähetetty onnistuneesti");  
+// this.props.history.push('/HaeTuote')  
 }  
 else{  
-alert('Data not Saved');  
+alert('Lähetys ei onnistunut');  
 debugger;
-this.props.history.push('/HaeTuote')  
+// this.props.history.push('/HaeTuote')  
 }  
 })  
 }
