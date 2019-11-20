@@ -7,8 +7,7 @@ import Add from './components/Add';
 import './index.css';
 
 // import LuoTuote from './LuoTuote';
-// import logo from './logo.svg';
-//import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';  
+// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';  
 import './App.css';
 
 
