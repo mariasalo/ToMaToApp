@@ -106,6 +106,10 @@ insert into tuote
 insert into tuote 
 (nimi, kuvaus, herkut) values ('Suklaamuffinsseja', 'Keilaniemi, Espoo', 1)
 
+<<<<<<< HEAD
 
 
 
+=======
+delete from tuote where tuoteID=12;
+>>>>>>> master

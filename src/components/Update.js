@@ -6,6 +6,10 @@ import DeleteTuote from "../toiminnallisuudet/PoistaTuote";
 
  
 class Update extends Component {
+  state = {tuote: "", data: []}
+  componentDidMount() {
+    this.setState({tuote: this.props.location.data.nimi, data: this.props.location.data})
+  }
     render() {
 
      return (
@@ -13,14 +17,9 @@ class Update extends Component {
         <div className="update">
           <h3 className="center"></h3>
           <div className="box"></div>
-          
           <p>Muokkaa ilmoitusta:</p>
-          {/* <div><MuokkaaTuote/></div> tai <div><Edit/></div> riippuen tietty mitä MuokkaaTuote palauttaa?*/}
-          
-          {/* <div className="poistoon"></div> */}
-          {/* <p><DeleteTuote/></p> */}
-{/* 
-          { <div><PoistaTuote/></div> } */}
+          <div><MuokkaaTuote nimi={this.state.tuote} id={this.state.data.tuoteId}/></div>  
+          {/* <div><PoistaTuote/></div> */}
           
           </div>
           </div>

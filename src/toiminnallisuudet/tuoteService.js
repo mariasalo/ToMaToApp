@@ -7,7 +7,7 @@ axios.get('https://localhost:44376/api/tomaatti/')
   //this.setState({ business: response.data }); 
   // console.log(response, 'onnistui')
   callback(response.data) 
-  debugger;  
+  // debugger;  
 
 })  
 .catch(function (error) {  
@@ -15,7 +15,26 @@ axios.get('https://localhost:44376/api/tomaatti/')
 })  
 }
 
-//Tässä POST pyyntö:
+
+// Tässä GET pyyntö Id:n perusteella
+export function getById(id){
+        axios.get('https://localhost:44376/api/tomaatti/'+id)  
+            .then(response => {  
+                this.setState({  
+                Id: response.data.tuoteId,   
+                Nimi: response.data.Nimi,   
+                Kuvaus: response.data.Kuvaus,  
+                Lkm: response.data.Lkm,  
+                Sijainti: response.data.Sijainti });  
+    
+            })  
+            .catch(function (error) {  
+                console.log(error);  
+            })  
+}
+
+//Tässä POST pyyntö
+
 export function postLisää(myJSON){
   console.log(myJSON)
 
@@ -28,34 +47,30 @@ if(json.status===200){
 }  
 else{  
 alert('Lähetys ei onnistunut');  
-debugger;
+// debugger;
 // this.props.history.push('/HaeTuote')  
 }  
 })  
 }
 
-//Tässä PUT pyyntö: // tämä on kesken !
-export function putMuokkaa(){
-        axios.get('https://localhost:44376/api/tomaatti/?id'+this.props.match.params.id)  
-            .then(response => {  
-                this.setState({   
-                Nimi: response.data.Nimi,   
-                Kuvaus: response.data.Kuvaus,  
-                Lkm: response.data.Lkm,  
-                Sijainti: response.data.Sijainti });  
-    
-            })  
-            .catch(function (error) {  
-                console.log(error);  
-            })  
+//Tässä PUT pyyntö: // tämä on kesken ! 
+// Sitten lähetetään muokatut tiedot PUT pyynnöllä:
+export function putMuokkaa(obj, id)
+{
+  axios.put('https://localhost:44376/api/tomaatti/update/'+id, obj) 
+          .then(res => console.log(res.data));  
+          // debugger;  
+          // this.props.history.push('/HaeTuote')  
+
 }
 
-//Tässä DELETE pyyntö: // tämä on kesken !, mikä parametri?
-export function deletePoista(data){
-     axios.delete('http://localhost:44376/api/Tomaatti/delete/${id}'+this.props.match.params.id)  
+
+//Tässä DELETE pyyntö: // tämä on kesken !
+export function deletePoista(id){
+     axios.delete('http://localhost:44376/Api/tomaatti/Deletepoista?id='+id)  
     .then(json => {  
     if(json.data.Status==='Delete'){  
-    alert('Record deleted successfully!!');  
+    alert('Ilmoitus poistettu onnistuneesti!!');  
     }  
     }) 
   }
