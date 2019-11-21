@@ -1,7 +1,7 @@
 import React from 'react';   
 import { Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';  
 import axios from 'axios'  
-import '../LuoTuote';  
+import '../toiminnallisuudet/LuoTuote';  
 
 import { putMuokkaa } from './tuoteService';
 class Edit extends React.Component {  
