@@ -38,14 +38,12 @@ import Tuote from '../toiminnallisuudet/Tuote';
 
     render(){
 
+        // tässä Redux kortit
                 let itemList = this.props.items.map(item=>{
             return(
                 <div className="card" key={item.id}>
                         <div className="card-image">
                             <img src={item.img} alt={item.title}/>
-
-
-                            
                             <span className="card-title"></span>
                             <span to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></span>
 
@@ -59,16 +57,13 @@ import Tuote from '../toiminnallisuudet/Tuote';
             )
         })
 
+        // tässä React kortit
         let itemList2 = this.state.tuotteet.map(item=>{
             return(
                 <Tuote key={item.id} data={item}>
-
-                        
                  </Tuote>
-        
             );
         })
-
         return(
             <div className="container">
                 <h3 className="center"></h3>
@@ -76,18 +71,18 @@ import Tuote from '../toiminnallisuudet/Tuote';
                     {itemList}
                     {itemList2}
                 </div>
-
             </div>
         )
     }
 }
+
+// Nämä liittyvät Redux ostoskoriin
 const mapStateToProps = (state)=>{
     return {
       items: state.items
     }
   }
 const mapDispatchToProps= (dispatch)=>{
-    
     return{
         addToCart: (id)=>{dispatch(addToCart(id))}
     }
