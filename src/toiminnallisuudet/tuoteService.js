@@ -18,14 +18,9 @@ axios.get('https://localhost:44376/api/tomaatti/')
 
 // Tässä GET pyyntö Id:n perusteella
 export function getById(id){
-        axios.get('https://localhost:44376/api/tomaatti/'+id)  
+        return axios.get('https://localhost:44376/api/tomaatti/'+id)  
             .then(response => {  
-                this.setState({  
-                Id: response.data.tuoteId,   
-                Nimi: response.data.Nimi,   
-                Kuvaus: response.data.Kuvaus,  
-                Lkm: response.data.Lkm,  
-                Sijainti: response.data.Sijainti });  
+           return response;  
     
             })  
             .catch(function (error) {  
@@ -67,7 +62,7 @@ export function putMuokkaa(obj, id)
 
 //Tässä DELETE pyyntö: // tämä on kesken !
 export function deletePoista(id){
-     axios.delete('http://localhost:44376/Api/tomaatti/delete/'+id)  
+     return axios.delete('http://localhost:44376/Api/tomaatti/delete/'+id)  
     .then(json => {  
     if(json.data.Status==='Delete'){  
     alert('Ilmoitus poistettu onnistuneesti!!');  
