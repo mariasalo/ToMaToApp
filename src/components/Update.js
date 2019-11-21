@@ -18,6 +18,7 @@ class Update extends Component {
           <h3 className="center"></h3>
           <div className="box"></div>
           <div><MuokkaaTuote nimi={this.state.tuote} id={this.state.data.tuoteId}/></div>  
+          <div><PoistaTuote nimi={this.state.tuote} id={this.state.data.tuoteId}/></div> 
           {/* <div><PoistaTuote/></div> */}
           
           </div>
