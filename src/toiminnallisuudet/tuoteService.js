@@ -50,9 +50,9 @@ export function putMuokkaa(){
             })  
 }
 
-//Tässä DELETE pyyntö: // tämä on kesken !
-export function deletePoista(){
-     axios.delete('http://localhost:44376//api/Tomaatti/delete/{id}'+this.props.obj.Id)  
+//Tässä DELETE pyyntö: // tämä on kesken !, mikä parametri?
+export function deletePoista(data){
+     axios.delete('http://localhost:44376/api/Tomaatti/delete/${id}'+this.props.match.params.id)  
     .then(json => {  
     if(json.data.Status==='Delete'){  
     alert('Record deleted successfully!!');  
