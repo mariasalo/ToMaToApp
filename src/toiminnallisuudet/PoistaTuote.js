@@ -1,14 +1,27 @@
-import React, { Component } from 'react';  
-import axios from 'axios';  
-import { Link } from 'react-router-dom';  
+import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
 import { deletePoista } from './tuoteService';
+
 class PoistaTuote extends Component {  
-  constructor(props) {  
-    super(props);  
-    }  
+  // constructor(props) {  
+  //   super(props);  
+   
+  //   }  
+
+    // export default class HaeTuote extends React.Component {
+    //   state = {
+    //     id: '',
+    //   }
       
-    DeleteStudent= () =>{  // tämä on kesken !
-      deletePoista()
+    // handleChange = event => {
+    //   this.setState({ id: event.target.value });
+    // }
+  
+    // handleSubmit = event => {
+    //   event.preventDefault();
+
+    poistaTuote= () =>{  // tämä on kesken !
+      deletePoista(this.props.id)
     //  axios.delete('http://localhost:52564/Api/Student/Deletestudent?id='+this.props.obj.Id)  
     // .then(json => {  
     // if(json.data.Status==='Delete'){  
@@ -16,28 +29,23 @@ class PoistaTuote extends Component {
     // }  
     // })  
     }  
+
+
   render() {  
     return (  
-        <tr>  
-          <td>  
-            {this.props.obj.Nimi}  
-          </td>  
-          <td>  
-            {this.props.obj.Kuvaus}  
-          </td>  
-          <td>  
-            {this.props.obj.Lkm}  
-          </td>  
-          <td>  
-            {this.props.obj.Sijainti}  
-          </td>  
-          <td>  
-          <Link to={"/edit/"+this.props.obj.Id} className="btn btn-success">Edit</Link>  
-          </td>  
-          <td>  
-            <button type="button" onClick={this.DeleteStudent} className="btn btn-danger">Delete</button>  
-          </td>  
-        </tr>  
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            <input type="text" name="id" onChange={this.handleChange} />
+          </label>
+          {/* <button type="submit">Poista</button> */}
+        </form>
+      </div>
+        // <tr>  
+        //    <td>  
+        //     <button type="submit" className="btn btn-danger">Delete</button>  
+        //   </td>  
+        // </tr>   
     );  
   }  
 }  

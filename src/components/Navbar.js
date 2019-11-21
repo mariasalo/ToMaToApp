@@ -7,23 +7,6 @@ import Update from './Update';
 const Navbar = ()=>{
     const padding = { padding: 5 }
     return(
-        
-      // <div>
-      //   <Router>
-      //     <div>
-      //       <div>
-      //         <Link to="/">home</Link>
-      //         {/* <Link style={padding} to="/ruoat">selaa ruokia</Link> */}
-      //         <Link style={padding} to="/cart">varaukset</Link>
-      //         <li><Link to="/cart"><i className="material-icons">shopping_cart</i></Link></li>
-      //       </div>
-      //       <Route exact path="/" render={() => <Home />} />
-      //       {/* <Route path="/notes" render={() => <Notes />} /> */}
-      //       <Route path="/cart" render={() => <Cart />} />
-      //     </div>
-      //   </Router>
-      // </div>
-
           <nav className="nav-wrapper">
               <div className="container">
                   <Link to="/" className="brand-logo">ToMaTo</Link>
@@ -31,16 +14,14 @@ const Navbar = ()=>{
                   <ul className="right">
                       <li><Link to="/">Selaa tuotteita</Link></li>
                       <li><Link to="/add">Ilmoita uusi tuote</Link></li>
-                      <li><Link to="/update">Omat ilmoitukset</Link></li>
-                      <li><Link to="/cart">Omat varaukset</Link></li>
+                      <li><Link to="/cart">Omat varaukset   </Link></li>
+                      <li><i className="large material-icons md-48">account_box</i></li>
 
-                      {/* <li><Link to="/cart"><i className="material-icons">eco</i></Link></li> */}
                   </ul>
               </div>
           </nav>
     )
 }
-
 
 
 export default Navbar;
