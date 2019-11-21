@@ -19,6 +19,7 @@ class Update extends Component {
           <div className="box"></div>
           <p>Muokkaa ilmoitusta:</p>
           <div><MuokkaaTuote nimi={this.state.tuote} id={this.state.data.tuoteId}/></div>  
+          <div><PoistaTuote nimi={this.state.tuote} id={this.state.data.tuoteId}/></div> 
           {/* <div><PoistaTuote/></div> */}
           
           </div>

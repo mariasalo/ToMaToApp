@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';  
 import { Link } from 'react-router-dom';  
 import { deletePoista } from './tuoteService';
+
 class PoistaTuote extends Component {  
   constructor(props) {  
     super(props);  
     }  
       
-    DeleteStudent= () =>{  // tämä on kesken !
-      deletePoista()
+    PoistaTuote= () =>{  // tämä on kesken !
+      deletePoista(this.props.id)
     //  axios.delete('http://localhost:52564/Api/Student/Deletestudent?id='+this.props.obj.Id)  
     // .then(json => {  
     // if(json.data.Status==='Delete'){  
@@ -32,7 +33,7 @@ class PoistaTuote extends Component {
             {this.props.obj.Sijainti}  
           </td>  
           <td>  
-          <Link to={"/edit/"+this.props.obj.Id} className="btn btn-success">Edit</Link>  
+          <Link to={"/Add"}>Lisää ilmoitus</Link>  
           </td>  
           <td>  
             <button type="button" onClick={this.DeleteStudent} className="btn btn-danger">Delete</button>  
