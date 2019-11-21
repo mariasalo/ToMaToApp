@@ -20,7 +20,7 @@ class PoistaTuote extends Component {
   render() {  
     return (  
         <tr>  
-          <td>  
+          {/* <td>  
             {this.props.obj.Nimi}  
           </td>  
           <td>  
@@ -31,13 +31,13 @@ class PoistaTuote extends Component {
           </td>  
           <td>  
             {this.props.obj.Sijainti}  
-          </td>  
+          </td>   */}
           <td>  
-          <Link to={"/Add"}>Lisää ilmoitus</Link>  
+          <Link to={"/Add"}></Link>  
           </td>  
-          <td>  
+          {/* <td>  
             <button type="button" onClick={this.DeleteStudent} className="btn btn-danger">Delete</button>  
-          </td>  
+          </td>   */}
         </tr>  
     );  
   }  
