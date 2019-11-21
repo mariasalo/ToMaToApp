@@ -1,8 +1,8 @@
 import { Link, BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom'
 import React, {Component} from 'react'
-import Update from '../components/Update';
-import MuokkaaTuote from '../toiminnallisuudet/MuokkaaTuote';
+// import MuokkaaTuote from '../toiminnallisuudet/MuokkaaTuote';
 import Itemc from '../images/itemc.jpg'
+
 
 
 export default class Tuote extends Component {
@@ -34,12 +34,3 @@ export default class Tuote extends Component {
         );
     }
 }
-
-{/* let itemList = this.props.items.map(item=>{
-    return(
-        <Tuote key={item.id} data={item}>
-
-
-                
-         </Tuote>
-    ); */}
