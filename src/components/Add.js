@@ -11,7 +11,6 @@ class Add extends Component {
           <h3 className="center"></h3>
           <div className="box"></div>
           <div><LuoTuote/></div>
-          <div><MuokkaaTuote/></div>
           </div>
           </div>
         )

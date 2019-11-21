@@ -1,8 +1,8 @@
 import React from 'react';   
 import { Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';  
 import axios from 'axios'  
-import '../LuoTuote';  
-import { putMuokkaa } from './tuoteService';
+import '../toiminnallisuudet/LuoTuote';  
+import { putMuokkaa, getById } from './tuoteService';
 
 class MuokkaaTuote extends React.Component {  
     constructor(props) {  
@@ -22,23 +22,25 @@ class MuokkaaTuote extends React.Component {
         }  
     }  
     
-    componentDidMount() {   // kesken !
-        // putMuokkaa(this.state) //id parametrinä ? miten ?
+    // componentDidMount() {   
+       
+    //     }
+    //     // putMuokkaa(this.state) //id parametrinä ? miten ?
         
-        // axios.get('https://localhost:44376/api/tomaatti/'+this.props.match.params.id)
-        axios.get('https://localhost:44376/api/tomaatti/20')   
-            .then(response => {  
-                this.setState({   
-                Nimi: response.data.Nimi,   
-                Kuvaus: response.data.Kuvaus,  
-                Lkm: response.data.Lkm,  
-                Sijainti: response.data.Sijainti });  
-            console.log(response);
-            })  
-            .catch(function (error) {  
-                console.log(error);  
-            })  
-    }  
+    //     // axios.get('https://localhost:44376/api/tomaatti/'+this.props.match.params.id)
+    //     // axios.get('https://localhost:44376/api/tomaatti/20')   
+    //     //     .then(response => {  
+    //     //         this.setState({   
+    //     //         Nimi: response.data.Nimi,   
+    //     //         Kuvaus: response.data.Kuvaus,  
+    //     //         Lkm: response.data.Lkm,  
+    //     //         Sijainti: response.data.Sijainti });  
+    //     //     console.log(response);
+    //     //     })  
+    //     //     .catch(function (error) {  
+    //     //         console.log(error);  
+    //     //     })  
+    // }  
     
     onChangeNimi(e) {  
     this.setState({  
@@ -62,7 +64,7 @@ class MuokkaaTuote extends React.Component {
     }  
     
     onSubmit(e) {  
-    debugger;  
+    // debugger;  
     e.preventDefault();  
     const obj = {  
         // tuoteID: this.props.match.params.id,  
@@ -72,11 +74,13 @@ class MuokkaaTuote extends React.Component {
         Sijainti: this.state.Sijainti  
     
     };  
-    axios.put('https://localhost:44376/api/tomaatti/update/'+this.props.match.params.id, obj) 
-    // axios.put('https://localhost:44376/api/tomaatti/20', obj)  
-        .then(res => console.log(res.data));  
-        debugger;  
-        // this.props.history.push('/HaeTuote')  
+    putMuokkaa(obj, this.props.id);
+
+    // axios.put('https://localhost:44376/api/tomaatti/update/'+this.props.match.params.id, obj) 
+    // // axios.put('https://localhost:44376/api/tomaatti/20', obj)  
+    //     .then(res => console.log(res.data));  
+    //     debugger;  
+    //     // this.props.history.push('/HaeTuote')  
     }  
     render() {  
         return (  
@@ -89,7 +93,7 @@ class MuokkaaTuote extends React.Component {
                             <Label for="name" sm={2}>Name</Label>  
                             <Col sm={10}>  
                                 <Input type="text" name="Nimi" value={this.state.Nimi} onChange={this.onChangeNimi}  
-                                placeholder="Tuotteen nimi" />  
+                                placeholder={this.props.nimi} />  
                             </Col>  
                         </FormGroup>  
                         <FormGroup row>  

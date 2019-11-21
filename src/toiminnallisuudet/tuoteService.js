@@ -7,7 +7,7 @@ axios.get('https://localhost:44376/api/tomaatti/')
   //this.setState({ business: response.data }); 
   // console.log(response, 'onnistui')
   callback(response.data) 
-  debugger;  
+  // debugger;  
 
 })  
 .catch(function (error) {  
@@ -45,16 +45,22 @@ if(json.status===200){
 }  
 else{  
 alert('Lähetys ei onnistunut');  
-debugger;
+// debugger;
 // this.props.history.push('/HaeTuote')  
 }  
 })  
 }
 
-
-
 //Tässä PUT pyyntö: // tämä on kesken ! 
 // Sitten lähetetään muokatut tiedot PUT pyynnöllä:
+export function putMuokkaa(obj, id)
+{
+  axios.put('https://localhost:44376/api/tomaatti/update/'+id, obj) 
+          .then(res => console.log(res.data));  
+          // debugger;  
+          // this.props.history.push('/HaeTuote')  
+
+}
 
 
 //Tässä DELETE pyyntö: // tämä on kesken !
