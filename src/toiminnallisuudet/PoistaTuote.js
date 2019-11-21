@@ -6,7 +6,7 @@ import { deletePoista } from './tuoteService';
 class PoistaTuote extends Component {  
   constructor(props) {  
     super(props);  
-    this.PoistaTuote = this.PoistaTuote.bind(this);
+   
     }  
 
     // export default class HaeTuote extends React.Component {
@@ -21,7 +21,7 @@ class PoistaTuote extends Component {
     // handleSubmit = event => {
     //   event.preventDefault();
 
-    PoistaTuote= () =>{  // tämä on kesken !
+    poistaTuote= () =>{  // tämä on kesken !
       deletePoista(this.props.id)
     //  axios.delete('http://localhost:52564/Api/Student/Deletestudent?id='+this.props.obj.Id)  
     // .then(json => {  

@@ -14,7 +14,7 @@ Lkm: 1,
 Sijainti:'',   
 }  
 }   
-LuoTuote=()=>{  
+luoTuote=()=>{  
   // var obj = { nimi: this.state.Nimi, kuvaus: this.state.Kuvaus, lkm: this.state.Lkm };
   // postLisää(obj)
   postLisää(this.state);

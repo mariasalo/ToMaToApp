@@ -27,12 +27,8 @@ class App extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/cart" component={Cart}/>
                     <Route path="/add" component={Add}/>
-                    <Route path="/update" component={Update}/>
-
-                    <Route exact path="/update/:id" render={({ match }) =>
-                      <Tuote data={getById(match.data.tuoteId)} />
-    } />
-
+                    <Route path="/update" exact component={Update}/>
+                    <Route exact path="/update/:id" component={MuokkaaTuote}/>
                   </Switch>
              </div>
        </BrowserRouter>
