@@ -65,7 +65,7 @@ export function putMuokkaa(obj, id)
 
 //Tässä DELETE pyyntö: // tämä on kesken !
 export function deletePoista(id){
-     axios.delete('http://localhost:44376/Api/tomaatti/Deletepoista?id='+id)  
+     axios.delete('http://localhost:44376/Api/tomaatti/delete/'+id)  
     .then(json => {  
     if(json.data.Status==='Delete'){  
     alert('Ilmoitus poistettu onnistuneesti!!');  
