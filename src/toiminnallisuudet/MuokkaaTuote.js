@@ -77,8 +77,6 @@ class MuokkaaTuote extends React.Component {
     };  
     putMuokkaa(obj, this.props.id);
     
-
-
     // axios.put('https://localhost:44376/api/tomaatti/update/'+this.props.match.params.id, obj) 
     // // axios.put('https://localhost:44376/api/tomaatti/20', obj)  
     //     .then(res => console.log(res.data));  
@@ -124,11 +122,12 @@ class MuokkaaTuote extends React.Component {
                             <Col sm={5}>  
                             </Col>  
                             <Col sm={1}>  
-                            <Button type="submit" color="success">Lähetä</Button>{' '}  
+                            <Button type="submit" color="success">Tallenna</Button>{' '}
                             </Col>  
                             <Col sm={1}>  
                                 {/* <Button type="delete" color="danger">Poista</Button>{' '}   */}
-                                <Button type="button" onClick={this.PoistaTuote} className="btn btn-danger">Poista</Button>
+                                {/* <Button type="button" onClick={this.PoistaTuote} className="btn btn-danger">Poista</Button> */}
+                                <Button type="button" onClick={this.PoistaTuote} className="btn btn-danger">Poista ilmoitus</Button>
                             </Col>  
                             <Col sm={5}>  
                             </Col>  

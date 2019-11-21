@@ -73,7 +73,7 @@ return (
           <Col sm={5}>  
           </Col>  
           <Col sm={1}>  
-          <button type="button" onClick={this.LuoTuote} className="btn btn-success">Submit</button>  
+          <button type="button" onClick={this.LuoTuote} className="btn btn-success">Lisää</button>  
           </Col>  
           {/* <Col sm={1}>  
             <Button color="danger">Cancel</Button>{' '}  
