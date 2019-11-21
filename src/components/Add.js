@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LuoTuote from '../toiminnallisuudet/LuoTuote';
+import MuokkaaTuote from '../toiminnallisuudet/MuokkaaTuote';
  
 class Add extends Component {
     render() {
@@ -10,6 +11,7 @@ class Add extends Component {
           <h3 className="center"></h3>
           <div className="box"></div>
           <div><LuoTuote/></div>
+          <div><MuokkaaTuote/></div>
           </div>
           </div>
         )

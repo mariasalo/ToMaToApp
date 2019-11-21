@@ -15,7 +15,24 @@ axios.get('https://localhost:44376/api/tomaatti/')
 })  
 }
 
-//Tässä POST pyyntö: // tämä on kesken !
+// Tässä GET pyyntö Id:n perusteella
+export function getById(id){
+        axios.get('https://localhost:44376/api/tomaatti/'+id)  
+            .then(response => {  
+                this.setState({  
+                Id: response.data.tuoteId,   
+                Nimi: response.data.Nimi,   
+                Kuvaus: response.data.Kuvaus,  
+                Lkm: response.data.Lkm,  
+                Sijainti: response.data.Sijainti });  
+    
+            })  
+            .catch(function (error) {  
+                console.log(error);  
+            })  
+}
+
+//Tässä POST pyyntö
 export function postLisää(myJSON){
   console.log(myJSON)
 
@@ -34,21 +51,11 @@ debugger;
 })  
 }
 
-//Tässä PUT pyyntö: // tämä on kesken !
-export function putMuokkaa(){
-        axios.get('https://localhost:44376/api/tomaatti/?id'+this.props.match.params.id)  
-            .then(response => {  
-                this.setState({   
-                Nimi: response.data.Nimi,   
-                Kuvaus: response.data.Kuvaus,  
-                Lkm: response.data.Lkm,  
-                Sijainti: response.data.Sijainti });  
-    
-            })  
-            .catch(function (error) {  
-                console.log(error);  
-            })  
-}
+
+
+//Tässä PUT pyyntö: // tämä on kesken ! 
+// Sitten lähetetään muokatut tiedot PUT pyynnöllä:
+
 
 //Tässä DELETE pyyntö: // tämä on kesken !
 export function deletePoista(){
