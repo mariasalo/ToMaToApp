@@ -92,6 +92,4 @@ insert into kayttaja
 (kayttajanimi, email, salasana) values ('urho', 'testi@testi.fi', '12345')
 
 select * from tuote join kayttaja on tuote.kayttajaID = kayttaja.kayttajaID
-
-select * from kayttaja
-
+select * from tuote
