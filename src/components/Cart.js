@@ -23,12 +23,15 @@ class Cart extends Component{
                                 
                                     <div className="item-desc">
                                         <span className="title">{item.title}</span>
-                                        <p>{item.desc}</p>
+                                        <p>{item.desc}</p><br></br>
+                                        <p></p>
+                                        <button class="btn waves-effect waves-light btn-small" type="submit" name="action">Ota yhteyttä ilmoittajaan<i class="material-icons right">send</i></button>
+                                        <p></p><br></br>
                                         <div className="add-remove">
                                             {/* <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleAddQuantity(item.id)}}>arrow_drop_up</i></Link>
                                             <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleSubtractQuantity(item.id)}}>arrow_drop_down</i></Link> */}
                                         </div>
-                                        <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Poista</button>
+                                        <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Poista varauksista</button>
                                     </div>
                                     
                                 </li>

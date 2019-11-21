@@ -121,10 +121,10 @@ class MuokkaaTuote extends React.Component {
                             <Col sm={5}>  
                             </Col>  
                             <Col sm={1}>  
-                            <Button type="submit" color="success">Submit</Button>{' '}  
+                            <Button type="submit" color="success">Tallenna</Button>{' '}  
                             </Col>  
                             <Col sm={1}>  
-                                <Button color="danger">Cancel</Button>{' '}  
+                            <Button color="danger">Poista ilmoitus</Button>{' '}  
                             </Col>  
                             <Col sm={5}>  
                             </Col>  
