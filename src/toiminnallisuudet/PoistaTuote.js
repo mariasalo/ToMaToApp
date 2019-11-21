@@ -21,7 +21,7 @@ class PoistaTuote extends Component {
     return (  
         <tr>  
           {/* <td>  
-            {this.data.tuoteId}  
+            {this.props.obj.Nimi}  
           </td>  
           <td>  
             {this.data.nimi}  
@@ -30,14 +30,14 @@ class PoistaTuote extends Component {
             {this.data.kuvaus}  
           </td>  
           <td>  
-            {this.data.lkm}  
+            {this.props.obj.Sijainti}  
           </td>   */}
           <td>  
-          <Link to={"/Add"}>Lisää ilmoitus</Link>  
+          <Link to={"/Add"}></Link>  
           </td>  
-          <td> 
-            <button type="button" onClick={this.deletePoista} className="poistoon">Delete</button>  
-          </td>  
+          {/* <td>  
+            <button type="button" onClick={this.DeleteStudent} className="btn btn-danger">Delete</button>  
+          </td>   */}
         </tr>  
     );  
   }  

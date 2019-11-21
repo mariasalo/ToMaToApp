@@ -125,17 +125,9 @@ class MuokkaaTuote extends React.Component {
                             </Col>  
                             <Col sm={1}>  
 
-                            <Button type="submit" color="success">Tallenna</Button>{' '}  
+                            <Button type="submit" color="success">Tallenna</Button>{' '} <Button color="danger">Poista ilmoitus</Button>{' '} 
                             </Col>  
                             <Col sm={1}>  
-                            <Button color="danger">Poista ilmoitus</Button>{' '}  
-          
-                            //<Button type="submit" color="success">Lähetä</Button>{' '}  
-                            //</Col>  
-                            //<Col sm={1}>  
-                                //{/* <Button type="delete" color="danger">Poista</Button>{' '}   */}
-                                //<Button type="button" onClick={this.PoistaTuote} className="btn btn-danger">Poista</Button>
-
                             </Col>  
                             <Col sm={5}>  
                             </Col>  
