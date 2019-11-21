@@ -1,43 +1,46 @@
 import React from 'react';   
 import { Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';  
 import axios from 'axios'  
-import '../LuoTuote';  
+import '../toiminnallisuudet/LuoTuote';  
+import { putMuokkaa, getById } from './tuoteService';
 
-import { putMuokkaa } from './tuoteService';
-class Edit extends React.Component {  
+class MuokkaaTuote extends React.Component {  
     constructor(props) {  
         super(props)  
         
-    this.onChangeName = this.onChangeNimi.bind(this);  
-    this.onChangeRollNo = this.onChangeKuvaus.bind(this);  
-    this.onChangeClass = this.onChangeLkm.bind(this);  
-    this.onChangeAddress = this.onChangeSijainti.bind(this);  
+    this.onChangeNimi = this.onChangeNimi.bind(this);  
+    this.onChangeKuvaus = this.onChangeKuvaus.bind(this);  
+    this.onChangeLkm = this.onChangeLkm.bind(this);  
+    this.onChangeSijainti = this.onChangeSijainti.bind(this);  
     this.onSubmit = this.onSubmit.bind(this);  
     
             this.state = {  
             Nimi: '',  
             Kuvaus: '',  
-            Lkm: '',  
+            Lkm: 1,  
             Sijainti: ''  
         }  
     }  
     
-    componentDidMount() {   // kesken !
-        putMuokkaa() //id parametrinä ? miten ?
+    // componentDidMount() {   
+       
+    //     }
+    //     // putMuokkaa(this.state) //id parametrinä ? miten ?
         
-        // axios.get('http://localhost:52564/Api/Tomaatti/StudentdetailById?id='+this.props.match.params.id)  
-        //     .then(response => {  
-        //         this.setState({   
-        //         Nimi: response.data.Nimi,   
-        //         Kuvaus: response.data.Kuvaus,  
-        //         Lkm: response.data.Lkm,  
-        //         Sijainti: response.data.Sijainti });  
-    
-        //     })  
-        //     .catch(function (error) {  
-        //         console.log(error);  
-        //     })  
-    }  
+    //     // axios.get('https://localhost:44376/api/tomaatti/'+this.props.match.params.id)
+    //     // axios.get('https://localhost:44376/api/tomaatti/20')   
+    //     //     .then(response => {  
+    //     //         this.setState({   
+    //     //         Nimi: response.data.Nimi,   
+    //     //         Kuvaus: response.data.Kuvaus,  
+    //     //         Lkm: response.data.Lkm,  
+    //     //         Sijainti: response.data.Sijainti });  
+    //     //     console.log(response);
+    //     //     })  
+    //     //     .catch(function (error) {  
+    //     //         console.log(error);  
+    //     //     })  
+    // }  
     
     onChangeNimi(e) {  
     this.setState({  
@@ -51,61 +54,65 @@ class Edit extends React.Component {
     }  
     onChangeLkm(e) {  
     this.setState({  
-        Lkm: e.target.value  
+        Lkm: parseInt(e.target.value) 
     });  
 }  
     onChangeSijainti(e) {  
         this.setState({  
-            Sijainti: e.target.value  
+            Sijainti: e.target.value
         });  
     }  
     
     onSubmit(e) {  
-    debugger;  
+    // debugger;  
     e.preventDefault();  
     const obj = {  
-        tuoteID: this.props.match.params.id,  
+        // tuoteID: this.props.match.params.id,  
         Nimi: this.state.Nimi,  
         Kuvaus: this.state.Kuvaus,  
         Lkm: this.state.Lkm,  
         Sijainti: this.state.Sijainti  
     
     };  
-    axios.post('http://localhost:52564/Api/Student/AddotrUpdatestudent/', obj)  
-        .then(res => console.log(res.data));  
-        debugger;  
-        this.props.history.push('/HaeTuote')  
+    putMuokkaa(obj, this.props.id);
+
+    // axios.put('https://localhost:44376/api/tomaatti/update/'+this.props.match.params.id, obj) 
+    // // axios.put('https://localhost:44376/api/tomaatti/20', obj)  
+    //     .then(res => console.log(res.data));  
+    //     debugger;  
+    //     // this.props.history.push('/HaeTuote')  
     }  
+    
     render() {  
         return (  
             <Container className="App">  
     
-                <h4 className="PageHeading">Update Student Informations</h4>  
+                <h4 className="PageHeading">Muokkaa ilmoituksen tietoja</h4>  
                 <Form className="form" onSubmit={this.onSubmit}>  
                     <Col>  
                         <FormGroup row>  
-                            <Label for="name" sm={2}>Name</Label>  
+                            <Label for="name" sm={2}>Nimi</Label>  
                             <Col sm={10}>  
                                 <Input type="text" name="Nimi" value={this.state.Nimi} onChange={this.onChangeNimi}  
-                                placeholder="Tuotteen nimi" />  
+                                placeholder={this.props.nimi} />  
                             </Col>  
                         </FormGroup>  
                         <FormGroup row>  
-                            <Label for="Password" sm={2}>Kuvaus</Label>  
+                            <Label for="kuvaus" sm={2}>Kuvaus</Label>  
                             <Col sm={10}>  
-                                <Input type="text" name="Kuvaus" value={this.state.Kuvaus} onChange={this.onChangeKuvaus} placeholder="Kuvaus" />  
+                                <Input type="text" name="Kuvaus" value={this.state.Kuvaus} onChange={this.onChangeKuvaus} placeholder="Esim. laatu, parasta ennen -päivämäärä, valmistaja" />  
                             </Col>  
                         </FormGroup>  
                             <FormGroup row>  
-                            <Label for="Password" sm={2}>Class</Label>  
+                            <Label for="lkm" sm={2}>Lkm</Label>  
                             <Col sm={10}>  
-                                <Input type="text" name="Lkm" value={this.state.Lkm} onChange={this.onChangeLkm} placeholder="Lkm" />  
+                                <Input type="number" name="Lkm" value={this.state.Lkm} onChange={this.onChangeLkm} placeholder="Lkm" />  
                             </Col>  
                         </FormGroup>  
                             <FormGroup row>  
-                            <Label for="Password" sm={2}>Address</Label>  
+                            <Label for="sijainti" sm={2}>Sijainti</Label>  
                             <Col sm={10}>  
-                                <Input type="text" name="Sijainti"value={this.state.Sijainti} onChange={this.onChangeSijainti} placeholder="Sijainti" />  
+                                <Input type="text" name="Sijainti"value={this.state.Sijainti} onChange={this.onChangeSijainti} placeholder="Mistä tuotteen voi hakea esim. Keilaniemi" />
                             </Col>  
                         </FormGroup>   
                     </Col>  
@@ -129,4 +136,4 @@ class Edit extends React.Component {
     }  
 }  
     
-export default Edit;  
+export default MuokkaaTuote;  

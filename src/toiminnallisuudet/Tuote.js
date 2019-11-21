@@ -1,4 +1,7 @@
+import { Link, BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom'
 import React, {Component} from 'react'
+import Update from '../components/Update';
+import MuokkaaTuote from '../toiminnallisuudet/MuokkaaTuote';
 
 
 export default class Tuote extends Component {
@@ -14,6 +17,7 @@ export default class Tuote extends Component {
                 <div className="card-content">
                     <p><b>{this.props.data.nimi}</b></p>
                     <p>{this.props.data.kuvaus}</p>
+                    <p><Link to={{pathname:`/update/${this.props.data.tuoteId}`, data: this.props.data }}><i className="material-icons">eco</i></Link></p> 
                 </div>
                 </div>
              
