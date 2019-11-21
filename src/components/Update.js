@@ -17,10 +17,10 @@ class Update extends Component {
           <p>Muokkaa ilmoitusta:</p>
           {/* <div><MuokkaaTuote/></div> tai <div><Edit/></div> riippuen tietty mitä MuokkaaTuote palauttaa?*/}
           
-          <div className="poistoon"></div>
+          {/* <div className="poistoon"></div> */}
           {/* <p><DeleteTuote/></p> */}
-
-          { <div><PoistaTuote/></div> }
+{/* 
+          { <div><PoistaTuote/></div> } */}
           
           </div>
           </div>
