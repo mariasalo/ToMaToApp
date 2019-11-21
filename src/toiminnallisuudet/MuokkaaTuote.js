@@ -1,8 +1,9 @@
 import React from 'react';   
 import { Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';  
-import axios from 'axios'  
+// import axios from 'axios'  
 import '../toiminnallisuudet/LuoTuote';  
-import { putMuokkaa, getById } from './tuoteService';
+import { putMuokkaa, deletePoista } from './tuoteService';
+import PoistaTuote from '../toiminnallisuudet/PoistaTuote';
 
 class MuokkaaTuote extends React.Component {  
     constructor(props) {  
@@ -75,6 +76,8 @@ class MuokkaaTuote extends React.Component {
     
     };  
     putMuokkaa(obj, this.props.id);
+    
+
 
     // axios.put('https://localhost:44376/api/tomaatti/update/'+this.props.match.params.id, obj) 
     // // axios.put('https://localhost:44376/api/tomaatti/20', obj)  
@@ -121,10 +124,10 @@ class MuokkaaTuote extends React.Component {
                             <Col sm={5}>  
                             </Col>  
                             <Col sm={1}>  
-                            <Button type="submit" color="success">Submit</Button>{' '}  
+
+                            <Button type="submit" color="success">Tallenna</Button>{' '} <Button color="danger">Poista ilmoitus</Button>{' '} 
                             </Col>  
                             <Col sm={1}>  
-                                <Button color="danger">Cancel</Button>{' '}  
                             </Col>  
                             <Col sm={5}>  
                             </Col>  
