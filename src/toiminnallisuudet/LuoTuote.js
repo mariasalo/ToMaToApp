@@ -50,7 +50,7 @@ return (
         <FormGroup row>  
           <Label for="kuvaus" sm={2}>Kuvaus</Label>  
           <Col sm={10}>  
-            <Input type="text" name="Kuvaus" onChange={this.handleChange} value={this.state.Kuvaus} placeholder="Esim. laatu, parasta ennen -päivämäärä, valmistaja" />  
+            <Input type="text" name="Kuvaus" onChange={this.handleChange} value={this.state.Kuvaus} placeholder="Mistä tuotteen voi hakea esim. Keilaniemi, Espoo" />  
           </Col>  
         </FormGroup>  
         <FormGroup row>  
@@ -62,7 +62,7 @@ return (
         <FormGroup row>  
           <Label for="sijainti" sm={2}>Sijainti</Label>  
           <Col sm={10}>  
-            <Input type="text" name="Sijainti" onChange={this.handleChange} value={this.state.Sijainti} placeholder="Mistä tuotteen voi hakea esim. Keilaniemi" />  
+            <Input type="text" name="Sijainti" onChange={this.handleChange} value={this.state.Sijainti} placeholder="Esim. laatu, parasta ennen -päivämäärä, valmistaja" />  
           </Col>  
         </FormGroup>  
       </Col>  
