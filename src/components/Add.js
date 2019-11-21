@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import LuoTuote from '../toiminnallisuudet/LuoTuote';
-import MuokkaaTuote from '../toiminnallisuudet/MuokkaaTuote';
  
 class Add extends Component {
     render() {

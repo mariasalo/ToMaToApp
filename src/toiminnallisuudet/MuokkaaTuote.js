@@ -1,9 +1,8 @@
 import React from 'react';   
 import { Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';  
-// import axios from 'axios'  
 import '../toiminnallisuudet/LuoTuote';  
-import { putMuokkaa, deletePoista } from './tuoteService';
-import PoistaTuote from '../toiminnallisuudet/PoistaTuote';
+import { putMuokkaa, deletePoista, getById } from './tuoteService';
+// import PoistaTuote from '../toiminnallisuudet/PoistaTuote';
 
 class MuokkaaTuote extends React.Component {  
     constructor(props) {  
@@ -23,25 +22,16 @@ class MuokkaaTuote extends React.Component {
         }  
     }  
     
-    // componentDidMount() {   
-       
-    //     }
-    //     // putMuokkaa(this.state) //id parametrinä ? miten ?
-        
-    //     // axios.get('https://localhost:44376/api/tomaatti/'+this.props.match.params.id)
-    //     // axios.get('https://localhost:44376/api/tomaatti/20')   
-    //     //     .then(response => {  
-    //     //         this.setState({   
-    //     //         Nimi: response.data.Nimi,   
-    //     //         Kuvaus: response.data.Kuvaus,  
-    //     //         Lkm: response.data.Lkm,  
-    //     //         Sijainti: response.data.Sijainti });  
-    //     //     console.log(response);
-    //     //     })  
-    //     //     .catch(function (error) {  
-    //     //         console.log(error);  
-    //     //     })  
-    // }  
+    componentDidMount() {   
+        getById(this.props.match.params.id).then((response)=>{
+            this.setState({  
+                Id: response.data.tuoteId,   
+                Nimi: response.data.nimi,   
+                Kuvaus: response.data.kuvaus,  
+                Lkm: response.data.lkm,  
+                Sijainti: response.data.sijainti });
+        })
+        }
     
     onChangeNimi(e) {  
     this.setState({  
@@ -63,27 +53,28 @@ class MuokkaaTuote extends React.Component {
             Sijainti: e.target.value
         });  
     }  
-    
+
+    // Tässä tuotteen poisto id:n mukaan (response ei toimi)
+    poistaTuote = () => {
+        console.log("koitetaan poistaa", this.props.match.params.id)
+        deletePoista(this.props.match.params.id).then(()=>{
+        this.props.history.push("/add")
+        })
+    }
+
     onSubmit(e) {  
     // debugger;  
     e.preventDefault();  
     const obj = {  
-        // tuoteID: this.props.match.params.id,  
         Nimi: this.state.Nimi,  
         Kuvaus: this.state.Kuvaus,  
         Lkm: this.state.Lkm,  
         Sijainti: this.state.Sijainti  
-    
     };  
+
+    // Kutsutaan muokkaa funktiota tuoteServicestä
     putMuokkaa(obj, this.props.id);
-    
-
-
-    // axios.put('https://localhost:44376/api/tomaatti/update/'+this.props.match.params.id, obj) 
-    // // axios.put('https://localhost:44376/api/tomaatti/20', obj)  
-    //     .then(res => console.log(res.data));  
-    //     debugger;  
-    //     // this.props.history.push('/HaeTuote')  
+  
     }  
     
     render() {  
@@ -124,10 +115,11 @@ class MuokkaaTuote extends React.Component {
                             <Col sm={5}>  
                             </Col>  
                             <Col sm={1}>  
-
-                            <Button type="submit" color="success">Tallenna</Button>{' '} <Button color="danger">Poista ilmoitus</Button>{' '} 
+                            <Button type="submit" color="success">Tallenna</Button>{' '}
                             </Col>  
                             <Col sm={1}>  
+                                {/* <Button type="delete" color="danger">Poista</Button>{' '}   */}
+                                <Button type="button" onClick={this.poistaTuote} className="btn btn-danger">Poista ilmoitus</Button>
                             </Col>  
                             <Col sm={5}>  
                             </Col>  
