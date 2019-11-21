@@ -55,11 +55,22 @@ alert('Lähetys ei onnistunut');
 // Sitten lähetetään muokatut tiedot PUT pyynnöllä:
 export function putMuokkaa(obj, id)
 {
-  axios.put('https://localhost:44376/api/tomaatti/update/'+id, obj) 
-          .then(res => console.log(res.data));  
-          // debugger;  
-          // this.props.history.push('/HaeTuote')  
+  const options = {
+    headers: {'Access-Control-Allow-Methods':  '*', 
+              'Access-Control-Allow-Origin': '*'}
+  };
 
+  //
+  console.log(obj);
+  axios.put('https://localhost:44376/api/tomaatti/update/'+id, obj) 
+          .then(
+            response => response.addHeader("Access-Control-Allow-Origin", "*"))
+            //  response.addHeader("Access-Control-Allow-Methods", '*')
+            // response => response.addHeader("Access-Control-Request-Method", "GET, PUT, POST, DELETE, OPTIONS"));
+          // res => console.log(res.data))
+          
+          .catch(res => console.log(res))
+          ;  
 }
 
 
