@@ -20,7 +20,7 @@ class PoistaTuote extends Component {
   render() {  
     return (  
         <tr>  
-          <td>  
+          {/* <td>  
             {this.data.tuoteId}  
           </td>  
           <td>  
@@ -31,7 +31,7 @@ class PoistaTuote extends Component {
           </td>  
           <td>  
             {this.data.lkm}  
-          </td>  
+          </td>   */}
           <td>  
           <Link to={"/Add"}>Lisää ilmoitus</Link>  
           </td>  

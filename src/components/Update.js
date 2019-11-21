@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import '../toiminnallisuudet/LuoTuote';
 import MuokkaaTuote from '../toiminnallisuudet/MuokkaaTuote';
 import Edit from "../toiminnallisuudet/MuokkaaTuote";
-import DeleteTuote from "../toiminnallisuudet/PoistaTuote";
+import PoistaTuote from "../toiminnallisuudet/PoistaTuote";
 
  
 class Update extends Component {
