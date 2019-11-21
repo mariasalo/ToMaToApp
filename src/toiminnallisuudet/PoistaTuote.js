@@ -1,13 +1,12 @@
-import React, { Component } from 'react';  
-import axios from 'axios';  
-import { Link } from 'react-router-dom';  
+import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
 import { deletePoista } from './tuoteService';
 
 class PoistaTuote extends Component {  
-  constructor(props) {  
-    super(props);  
+  // constructor(props) {  
+  //   super(props);  
    
-    }  
+  //   }  
 
     // export default class HaeTuote extends React.Component {
     //   state = {

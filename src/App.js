@@ -5,16 +5,9 @@ import Home from './components/Home'
 import Cart from './components/Cart'
 import Add from './components/Add';
 import Update from './components/Update';
-import Tuote from './toiminnallisuudet/Tuote';
-
-import './index.css';
-
-// import LuoTuote from './LuoTuote';
-// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';  
-import './App.css';
-import { getById } from './toiminnallisuudet/tuoteService';
 import MuokkaaTuote from './toiminnallisuudet/MuokkaaTuote';
-
+import './index.css';
+import './App.css';
 
 class App extends Component {
   render() {

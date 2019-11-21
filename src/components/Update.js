@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import '../toiminnallisuudet/LuoTuote';
 import MuokkaaTuote from '../toiminnallisuudet/MuokkaaTuote';
-import Edit from "../toiminnallisuudet/MuokkaaTuote";
 import PoistaTuote from "../toiminnallisuudet/PoistaTuote";
 
  
@@ -11,7 +10,6 @@ class Update extends Component {
     this.setState({tuote: this.props.location.data.nimi, data: this.props.location.data})
   }
     render() {
-
      return (
          <div className="container">
         <div className="update">
