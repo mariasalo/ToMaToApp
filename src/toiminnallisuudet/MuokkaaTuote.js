@@ -56,9 +56,10 @@ class MuokkaaTuote extends React.Component {
 
     // Tässä tuotteen poisto id:n mukaan (response ei toimi)
     poistaTuote = () => {
-        console.log("koitetaan poistaa", this.props.match.params.id)
+        console.log("koitetaan poistaa", this.props.match.params.id);
         deletePoista(this.props.match.params.id).then(()=>{
-        this.props.history.push("/add")
+            console.log("delete onnistui")
+        // this.props.history.push("/add")
         })
     }
 
@@ -73,7 +74,7 @@ class MuokkaaTuote extends React.Component {
     };  
 
     // Kutsutaan muokkaa funktiota tuoteServicestä
-    putMuokkaa(obj, this.props.id);
+    putMuokkaa(obj, this.props.match.params.id);
   
     }  
     
