@@ -82,6 +82,7 @@ class MuokkaaTuote extends React.Component {
     //     debugger;  
     //     // this.props.history.push('/HaeTuote')  
     }  
+    
     render() {  
         return (  
             <Container className="App">  
@@ -90,7 +91,7 @@ class MuokkaaTuote extends React.Component {
                 <Form className="form" onSubmit={this.onSubmit}>  
                     <Col>  
                         <FormGroup row>  
-                            <Label for="name" sm={2}>Name</Label>  
+                            <Label for="name" sm={2}>Nimi</Label>  
                             <Col sm={10}>  
                                 <Input type="text" name="Nimi" value={this.state.Nimi} onChange={this.onChangeNimi}  
                                 placeholder={this.props.nimi} />  

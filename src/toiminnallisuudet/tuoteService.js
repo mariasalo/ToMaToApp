@@ -64,11 +64,11 @@ export function putMuokkaa(obj, id)
 
 
 //Tässä DELETE pyyntö: // tämä on kesken !
-export function deletePoista(){
-     axios.delete('http://localhost:44376/Api/tomaatti/Deletepoista?id='+this.props.obj.Id)  
+export function deletePoista(id){
+     axios.delete('http://localhost:44376/Api/tomaatti/Deletepoista?id='+id)  
     .then(json => {  
     if(json.data.Status==='Delete'){  
-    alert('Record deleted successfully!!');  
+    alert('Ilmoitus poistettu onnistuneesti!!');  
     }  
     }) 
   }
