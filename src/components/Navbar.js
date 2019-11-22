@@ -9,14 +9,13 @@ const Navbar = ()=>{
     return(
           <nav className="nav-wrapper">
               <div className="container">
-                  <Link to="/" className="brand-logo">ToMaTo</Link>
+                  <Link to="/" className="brand-logo left"><strong>ToMaTo</strong></Link>
                   
-                  <ul className="right">
+                  <ul className="right hide-on-small-only">
                       <li><Link to="/">Selaa tuotteita</Link></li>
                       <li><Link to="/add">Ilmoita uusi tuote</Link></li>
                       <li><Link to="/cart">Omat varaukset   </Link></li>
                       <li><i className="large material-icons md-48">account_box</i></li>
-
                   </ul>
               </div>
           </nav>
