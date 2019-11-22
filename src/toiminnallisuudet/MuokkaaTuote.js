@@ -73,7 +73,7 @@ class MuokkaaTuote extends React.Component {
     };  
 
     // Kutsutaan muokkaa funktiota tuoteServicestä
-    putMuokkaa(obj, this.props.id);
+    putMuokkaa(obj, this.props.match.params.id);
   
     }  
     

@@ -3,8 +3,6 @@ import React, {Component} from 'react'
 // import MuokkaaTuote from '../toiminnallisuudet/MuokkaaTuote';
 import Itemc from '../images/itemc.jpg'
 
-
-
 export default class Tuote extends Component {
     render () {
         return (
