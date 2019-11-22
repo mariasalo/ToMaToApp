@@ -105,12 +105,12 @@ class MuokkaaTuote extends React.Component {
                                 <Input type="number" name="Lkm" value={this.state.Lkm} onChange={this.onChangeLkm} placeholder="Lkm" />  
                             </Col>  
                         </FormGroup>  
-                            <FormGroup row>  
+                            {/* <FormGroup row>  
                             <Label for="sijainti" sm={2}>Sijainti</Label>  
                             <Col sm={10}>  
                                 <Input type="text" name="Sijainti"value={this.state.Sijainti} onChange={this.onChangeSijainti} placeholder="Mistä tuotteen voi hakea esim. Keilaniemi" />
                             </Col>  
-                        </FormGroup>   
+                        </FormGroup>    */}
                     </Col>  
                     <Col>  
                         <FormGroup row>  
