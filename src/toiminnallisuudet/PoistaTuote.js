@@ -51,3 +51,26 @@ class PoistaTuote extends Component {
 }  
   
 export default PoistaTuote;
+
+
+
+{/* <tr>  
+<td>  
+  {this.data.tuoteId}  
+</td>  
+<td>  
+  {this.data.nimi}  
+</td>  
+<td>  
+  {this.data.kuvaus}  
+</td>  
+<td>  
+  {this.data.lkm}  
+</td>  
+<td>  
+<Link to={"/edit/"+this.props.obj.Id} className="btn btn-success">Edit</Link>  
+</td>  
+<td>  
+  <button type="button" onClick={this.deletePoista} className="btn btn-danger">Delete</button>  
+</td>  
+</tr>   */}

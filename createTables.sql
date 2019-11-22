@@ -1,5 +1,5 @@
-create database KiertomaattiDB
-use KiertomaattiDB
+--create database KiertomaattiDB
+--use KiertomaattiDB
 
 create table tuote
 (
@@ -30,8 +30,8 @@ kayttajaID int identity(1,1) primary key,
 kayttajaNimi nvarchar(20) not null,
 email nvarchar(255) not null,
 salasana nvarchar(255) not null,
-salasanaHash nvarchar(255),
-salasanaSalt nvarchar(255),
+salasanaHash nvarchar(255) not null,
+salasanaSalt nvarchar(255) not null,
 kuvaus nvarchar (255),
 puhelinnumero nvarchar(15),
 )
@@ -77,27 +77,39 @@ insert into tuote
 insert into kayttaja
 (kayttajanimi, email, salasana) values ('urho', 'testi@testi.fi', '12345')
 
-select * from tuote join kayttaja on tuote.kayttajaID = kayttaja.kayttajaID
+select * from tuote 
 
-select * from tuote
 
-delete from tuote
 
-insert into tuote
+
+insert into tuote 
 (nimi, kuvaus, hevi) values ('Tomaatteja', 'Kallio, Helsinki', 1)
-insert into tuote
+
+insert into tuote 
 (nimi, kuvaus, kotitila) values ('Luomukananmunia', 'Punavuori, Helsinki', 1)
-insert into tuote
+
+insert into tuote 
 (nimi, kuvaus, itsetehty) values ('Leivonnaiset', 'Lehtisaari, Helsinki', 1)
-insert into tuote
+
+insert into tuote 
 (nimi, kuvaus, mausteet) values ('Mausteita', 'Meilahti, Helsinki', 1)
-insert into tuote
+
+insert into tuote 
 (nimi, kuvaus, avaamattomat) values ('Säilykepersikat', 'Tapiola, Espoo', 1)
-insert into tuote
+
+insert into tuote 
 (nimi, kuvaus, juomat) values ('Alkoholiton glögi', 'Munkkiniemi, Helsinki', 1)
-insert into tuote
+
+insert into tuote 
 (nimi, kuvaus, kuivatuotteet) values ('Vehnäjauhoja', 'Kamppi, Helsinki', 1)
-insert into tuote
+
+insert into tuote 
 (nimi, kuvaus, herkut) values ('Suklaamuffinsseja', 'Keilaniemi, Espoo', 1)
 
+<<<<<<< HEAD
+
+
+
+=======
 delete from tuote where tuoteID=12;
+>>>>>>> master
