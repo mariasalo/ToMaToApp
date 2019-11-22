@@ -73,7 +73,7 @@ class MuokkaaTuote extends React.Component {
     };  
 
     // Kutsutaan muokkaa funktiota tuoteServicestä
-    putMuokkaa(obj, this.props.id);
+    putMuokkaa(obj, this.props.match.params.id);
   
     }  
     
@@ -115,11 +115,9 @@ class MuokkaaTuote extends React.Component {
                             <Col sm={5}>  
                             </Col>  
                             <Col sm={1}>  
-                            <Button type="submit" color="success">Tallenna</Button>{' '}
+                            <Button type="submit" color="success">Tallenna</Button>{' '}  <Button type="button" onClick={this.poistaTuote} className="waves-effect waves-light btn pink remove">Poista ilmoitus</Button>
                             </Col>  
                             <Col sm={1}>  
-                                {/* <Button type="delete" color="danger">Poista</Button>{' '}   */}
-                                <Button type="button" onClick={this.poistaTuote} className="btn btn-danger">Poista ilmoitus</Button>
                             </Col>  
                             <Col sm={5}>  
                             </Col>  
