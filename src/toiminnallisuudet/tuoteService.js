@@ -15,6 +15,7 @@ axios.get('https://localhost:44376/api/tomaatti/')
 })  
 }
 
+
 // Tässä GET pyyntö Id:n perusteella
 export function getById(id){
         return axios.get('https://localhost:44376/api/tomaatti/'+id)  
@@ -28,6 +29,7 @@ export function getById(id){
 }
 
 //Tässä POST pyyntö
+
 export function postLisää(myJSON){
   console.log(myJSON)
 
@@ -46,14 +48,29 @@ alert('Lähetys ei onnistunut');
 })  
 }
 
-//Tässä PUT pyyntö: // tämä on kesken ! 
+//Tässä PUT pyyntö: 
 // Sitten lähetetään muokatut tiedot PUT pyynnöllä:
 export function putMuokkaa(obj, id)
 {
+<<<<<<< HEAD
   // const options = {
   //   headers: {'Access-Control-Allow-Methods':  '*', 
   //             'Access-Control-Allow-Origin': '*'}
   // };
+=======
+  axios.put('https://localhost:44376/api/tomaatti/update/'+id, obj) 
+          .then(res => {
+            if(res.data.status===res.data.status){
+            console.log(res.data);  
+          alert("Tiedot muokattu onnistuneesti!");
+          }
+          else{
+            alert("Ei onnistunut");
+          }
+        })
+          // debugger;  
+          // this.props.history.push('/HaeTuote')  
+>>>>>>> master
 
   //
   console.log(obj);

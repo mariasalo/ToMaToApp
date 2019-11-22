@@ -39,3 +39,6 @@
 .nav-wrapper {
   background-color: #000000!important;
 }
+.brand-logo {
+position: absolute;
+}
