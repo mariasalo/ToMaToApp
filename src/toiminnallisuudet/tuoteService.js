@@ -52,12 +52,6 @@ alert('Lähetys ei onnistunut');
 // Sitten lähetetään muokatut tiedot PUT pyynnöllä:
 export function putMuokkaa(obj, id)
 {
-<<<<<<< HEAD
-  // const options = {
-  //   headers: {'Access-Control-Allow-Methods':  '*', 
-  //             'Access-Control-Allow-Origin': '*'}
-  // };
-=======
   axios.put('https://localhost:44376/api/tomaatti/update/'+id, obj) 
           .then(res => {
             if(res.data.status===res.data.status){
@@ -70,7 +64,6 @@ export function putMuokkaa(obj, id)
         })
           // debugger;  
           // this.props.history.push('/HaeTuote')  
->>>>>>> master
 
   //
   console.log(obj);

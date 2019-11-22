@@ -59,12 +59,12 @@ return (
             <Input type="number" name="Lkm" onChange={this.handleChange} value={this.state.Lkm} placeholder="Lukumäärä" required />  
           </Col>  
         </FormGroup>  
-        <FormGroup row>  
+        {/* <FormGroup row>  
           <Label for="sijainti" sm={2}>Sijainti</Label>  
           <Col sm={10}>  
             <Input type="text" name="Sijainti" onChange={this.handleChange} value={this.state.Sijainti} placeholder="Esim. laatu, parasta ennen -päivämäärä, valmistaja" />  
           </Col>  
-        </FormGroup>  
+        </FormGroup>   */}
       </Col>  
       <Col>  
         <FormGroup row>  
