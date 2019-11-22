@@ -69,15 +69,23 @@ export function putMuokkaa(obj, id)
 }
 
 
-//Tässä DELETE pyyntö: // tämä on kesken !
+//Tässä DELETE pyyntö:
 export function deletePoista(id){
-     return axios.delete('http://localhost:44376/api/tomaatti/delete/'+id)  
-    .then(json => {  
-    if(json.data.Status==='Delete'){  
-    alert('Ilmoitus poistettu onnistuneesti!!');  
-    }  
-    })
-    .catch(res => console.log(res)) 
+  return fetch(`/api/tomaatti/delete/${id}`, {
+    method: 'DELETE'
+  }).then(res => {
+    console.log("DELETE lähetetty, status", res.status);
+    alert("Poistettu onnistuneesti");
+    // return res.json();
+  })
+    //  return axios.delete('/api/tomaatti/delete/'+id)  
+    // .then(()=> console.log("deletePoista onnistui"))
+     // .then(json => {  
+    // if(json.data.Status==='Delete'){  
+    // alert('Ilmoitus poistettu onnistuneesti!!');  
+    // }  
+    // })
+    // .catch(res => console.log(res)) 
   }
 
 

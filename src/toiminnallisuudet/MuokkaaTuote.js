@@ -58,8 +58,9 @@ class MuokkaaTuote extends React.Component {
     poistaTuote = () => {
         console.log("koitetaan poistaa", this.props.match.params.id);
         deletePoista(this.props.match.params.id).then(()=>{
-            console.log("delete onnistui")
-        // this.props.history.push("/add")
+            // console.log("delete onnistui")
+
+        this.props.history.push("/")
         })
     }
 
