@@ -48,12 +48,20 @@ alert('Lähetys ei onnistunut');
 })  
 }
 
-//Tässä PUT pyyntö: // tämä on kesken ! 
+//Tässä PUT pyyntö: 
 // Sitten lähetetään muokatut tiedot PUT pyynnöllä:
 export function putMuokkaa(obj, id)
 {
   axios.put('https://localhost:44376/api/tomaatti/update/'+id, obj) 
-          .then(res => console.log(res.data));  
+          .then(res => {
+            if(res.data.status===res.data.status){
+            console.log(res.data);  
+          alert("Tiedot muokattu onnistuneesti!");
+          }
+          else{
+            alert("Ei onnistunut");
+          }
+        })
           // debugger;  
           // this.props.history.push('/HaeTuote')  
 
