@@ -1,4 +1,5 @@
 ﻿Academyn toinen viikkoprojekti / Mini project / Academy
+ 
 Project team: Maria Salo, Katri Nousiainen, Eveliina Järveläinen & Urho Niemelä
 
 Full-stack web application for reducing food waste including CRUD functionality.
