@@ -1,6 +1,5 @@
 import { Link, BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom'
 import React, {Component} from 'react'
-// import MuokkaaTuote from '../toiminnallisuudet/MuokkaaTuote';
 import Itemc from '../images/itemc.jpg'
 
 
